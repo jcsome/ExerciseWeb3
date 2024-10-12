@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "a",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "b",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"1012/tet.sol": "Sub"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"1012/tet.sol": {
+			"keccak256": "0x22c0a1ce2f2cd0ca035080149b20b974b9f60e30f66b32514e0254f6ff1edc13",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c35d5742738fb9a20435bcc5aa0a4efbee4470867ec0ca821cd926bffe6996a6",
+				"dweb:/ipfs/QmajKX31i39iZxSG7SrmVSHKvjBLBLQxAqkKmjyJCL1BYG"
+			]
+		}
+	},
+	"version": 1
+}

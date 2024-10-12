@@ -1,0 +1,96 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IBank",
+						"name": "bank",
+						"type": "address"
+					}
+				],
+				"name": "adminWithdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"1012/Admin.sol": "Admin"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"1012/Admin.sol": {
+			"keccak256": "0xcce3af083eb35ead7dc3a965a3072f517b79a03765032a774e6eafd7e9269858",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0d8102e4e0f6e0da4e77c985211862dec0ec555cea9891add8d9f94a6ca9e4dd",
+				"dweb:/ipfs/QmZgpbK45UQ5nAH8qaD1xxHqdeuF2kPp5poeYmYRyftQ8F"
+			]
+		},
+		"1012/IBank.sol": {
+			"keccak256": "0xa68f66e991ef6e07ad49cf0e08513de6cb4f6b38a457c92943629b11669209f1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://23443d438c186023adee8c8a14da0ce10dbf4b36e5bc8206c6257b9e1db21aa7",
+				"dweb:/ipfs/QmdE4Q8CMvCPhE6YiEgdMVSiU6EQmDD6F5gCdCQK4zAHeJ"
+			]
+		}
+	},
+	"version": 1
+}
