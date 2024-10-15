@@ -49,7 +49,7 @@
 		},
 		"gasEstimates": null,
 		"methodIdentifiers": {
-			"tokenReceived(address,uint256)": "cae15051"
+			"tokenReceived(address,uint256,uint256)": "f553454f"
 		}
 	},
 	"abi": [
@@ -63,6 +63,11 @@
 				{
 					"internalType": "uint256",
 					"name": "value",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "tokenId",
 					"type": "uint256"
 				}
 			],

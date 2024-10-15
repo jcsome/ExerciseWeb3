@@ -300,6 +300,11 @@
 						"internalType": "uint256",
 						"name": "_value",
 						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
 					}
 				],
 				"name": "transferWithCallback",
@@ -358,11 +363,11 @@
 			]
 		},
 		"1014/HookERC20/ExtendERC20.sol": {
-			"keccak256": "0x026b0371371d454d32a2e3fb47a170886a89b573ed504d03277b940b4d740d39",
+			"keccak256": "0xd2f570609f0d6454065bc8ebbc2e2625ed73df77a7e7610f65e3afc4c9fae08d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://83e9b8c9bf81edfd604a466bb9bd41ea366cf95cebaa20abc16249aaabcaab07",
-				"dweb:/ipfs/QmaKhozz5HR562ZQXMHPfbpDgrv2qitUJmKakpWvzvNZXF"
+				"bzz-raw://5094f8fdcee3a33e84369a5d0ecfd93fbce9743b57fbc5620a96a3a1b9b4b5e5",
+				"dweb:/ipfs/QmWNe648LwZqetDzkGaorh4MKUZ1wuuko5Mm3mg3vt9Dmn"
 			]
 		},
 		"@openzeppelin/contracts/utils/Address.sol": {

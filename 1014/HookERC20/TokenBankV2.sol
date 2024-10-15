@@ -10,7 +10,7 @@ contract TokenBankV2 is TokenBank, ITokenReceiver {
 
     }
 
-    function tokenReceived(address from, uint256 value) external{
+    function tokenReceived(address from, uint256 value, uint256 tokenId) external{
         balances[from] += value;
     }
 }
