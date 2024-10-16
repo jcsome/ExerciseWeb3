@@ -2,9 +2,10 @@
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 import "1014/HookERC20/ExtendERC20.sol";
 
-contract NFTMarket is ITokenReceiver {
+contract NFTMarket is ITokenReceiver, IERC721Receiver{
     IERC20 public token;  // ERC20 token used for payments
     IERC721 public nft;   // NFT contract
 
@@ -45,18 +46,19 @@ contract NFTMarket is ITokenReceiver {
         require(listings[tokenId].price == amount, "nft price not equal to amount");
         // Transfer the ERC20 tokens to the buyer
         token.transferFrom(msg.sender, listings[tokenId].seller, listings[tokenId].price);
-        nft.transferFrom(address(this), msg.sender, tokenId);
+        nft.safeTransferFrom(address(this), msg.sender, tokenId);
     }
 
     // IERC20Receiver implementation to handle token transfer callback
-    function tokenReceived(address from, uint256 amount, uint256 tokenId) external override {
+    function tokenReceived(address from, uint256 amount, bytes calldata data) external override {
         require(msg.sender == address(token), "Only ERC20 token transfers accepted");
+        uint256 tokenId = abi.decode(data, (uint256));
 
         Listing memory listing = listings[tokenId];
         require(listing.price == amount, "Incorrect token amount sent");
 
         // Transfer the NFT to the buyer
-        nft.transferFrom(address(this), from, tokenId);
+        nft.safeTransferFrom(address(this), from, tokenId);
 
         // Transfer the ERC20 tokens to the seller
         token.transfer(listing.seller, amount);
@@ -65,5 +67,14 @@ contract NFTMarket is ITokenReceiver {
         delete listings[tokenId];
 
         emit Purchased(tokenId, from, listing.seller, amount);
+    }
+
+    function onERC721Received(
+        address,
+        address,
+        uint256,
+        bytes calldata
+    ) external pure returns (bytes4) {
+        return this.onERC721Received.selector;
     }
 }

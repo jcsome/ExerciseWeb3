@@ -10,7 +10,8 @@ contract TokenBankV2 is TokenBank, ITokenReceiver {
 
     }
 
-    function tokenReceived(address from, uint256 value, uint256 tokenId) external{
+    function tokenReceived(address from, uint256 value, bytes data) external{
+        require(msg.sender==address(token), "TokenBankV2: token received not ERC20 token");
         balances[from] += value;
     }
 }

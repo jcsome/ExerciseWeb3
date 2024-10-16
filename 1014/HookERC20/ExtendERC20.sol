@@ -5,20 +5,20 @@ import "@openzeppelin/contracts/utils/Address.sol";
 import "1013/BaseERC20.sol";
 
 interface ITokenReceiver {
-    function tokenReceived(address from, uint256 value, uint256 tokenId) external;
+    function tokenReceived(address from, uint256 value, bytes calldata data) external;
 }
 
 interface IERC20WithCallback {
-    function transferWithCallback(address _to, uint256 _value, uint256 tokenId) external returns (bool);
+    function transferWithCallback(address _to, uint256 _value, bytes calldata data) external returns (bool);
 }
 
 contract ERC20WithCallback is BaseERC20, IERC20WithCallback{
     
     using Address for address;
-    function transferWithCallback(address _to, uint256 _value, uint256 tokenId) external returns (bool) {
+    function transferWithCallback(address _to, uint256 _value, bytes calldata data) external returns (bool) {
         transfer(_to, _value);
         if(isContract(_to)) {
-            ITokenReceiver(_to).tokenReceived(msg.sender, _value, tokenId);
+            ITokenReceiver(_to).tokenReceived(msg.sender, _value, data);
         }
         return true;
     }

@@ -49,7 +49,7 @@
 		},
 		"gasEstimates": null,
 		"methodIdentifiers": {
-			"transferWithCallback(address,uint256,uint256)": "0d0b17ea"
+			"transferWithCallback(address,uint256,bytes)": "d3139195"
 		}
 	},
 	"abi": [
@@ -66,9 +66,9 @@
 					"type": "uint256"
 				},
 				{
-					"internalType": "uint256",
-					"name": "tokenId",
-					"type": "uint256"
+					"internalType": "bytes",
+					"name": "data",
+					"type": "bytes"
 				}
 			],
 			"name": "transferWithCallback",
