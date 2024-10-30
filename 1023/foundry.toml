@@ -4,3 +4,10 @@ out = "out"
 libs = ["lib"]
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+
+[rpc_endpoints]
+sepolia = "https://ethereum-sepolia-rpc.publicnode.com"
+sepolia_backup = "https://api.zan.top/eth-sepolia"
+
+[etherscan]
+sepolia = { key = "7GG4FNRGHSW2VA55HKCFC85EHKGWCBM6XH" }
