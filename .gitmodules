@@ -10,3 +10,6 @@
 [submodule "1028/lib/Permit2"]
 	path = 1028/lib/Permit2
 	url = https://github.com/Uniswap/Permit2
+[submodule "1031/nftmarket-signature/lib/forge-std"]
+	path = 1031/nftmarket-signature/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
