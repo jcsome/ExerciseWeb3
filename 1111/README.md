@@ -66,11 +66,12 @@ $ cast --help
 ```
 -------------------------
 deploy & veritfy contract: 
-'''
+
+```
 $ forge create <contract-name> \
     --constructor-args <init-args> \
     --rpc-url <rpc-url> \
     --account <account> \
     --etherscan-api-key <eherscan-key> \
     --verify
-'''
+```
