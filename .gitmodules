@@ -46,3 +46,6 @@
 [submodule "1113/lib/forge-std"]
 	path = 1113/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "1115/openspacenft/lib/forge-std"]
+	path = 1115/openspacenft/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
