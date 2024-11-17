@@ -64,3 +64,16 @@ $ forge --help
 $ anvil --help
 $ cast --help
 ```
+----------
+fashbot rpc节点：
+```
+Network name: Flashbots RPC
+New RPC URL: https://rpc.flashbots.net
+Chain ID: 1
+Currency Symbol: ETH
+Block Explorer URL: https://etherscan.io
+```
+安装 flashbot js 库
+```
+npm install --save @flashbots/ethers-provider-bundle
+```
