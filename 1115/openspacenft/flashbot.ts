@@ -30,7 +30,7 @@ async function main() {
     const flashbotsProvider = await FlashbotsBundleProvider.create(provider, authSigner, FLASHBOTS_ENDPOINT);
 
     // Replace with your deployed contract address
-    const contractAddress = '0xA0f2A629Def24b412CB01636cc83c981B6Fc1ceE';
+    const contractAddress = '0x67e11528799D4eAE084931669D25e442f001F189';
 
     const abi = [
         "function enablePresale() external",
@@ -54,6 +54,7 @@ async function main() {
     }
     var targetBlockNumber = blockNumber + 1; // Targeting two blocks ahead
     const gasPrice = baseGasPrice * BigInt(20); // Base gas price + 1 Gwei
+    console.log('gas price:', gasPrice.toString());
 
     // Prepare the transactions
     const tx1 = {
@@ -83,9 +84,9 @@ async function main() {
     };
 
     // Bundle the transactions
-    const bundle = [tx1];
+    const bundle = [tx1, tx2];
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 100; i++) {
         targetBlockNumber = blockNumber + i;
         // Send the bundle
         const bundleResponse = await flashbotsProvider.sendBundle(bundle, targetBlockNumber);
